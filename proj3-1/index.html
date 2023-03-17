@@ -46,14 +46,21 @@
 	<h2 align="middle">Aditya Singh</h2>
 
 	<!-- Add Website URL -->
-	<h2 align="middle">Website URL: <a href="TODO">TODO</a></h2>
+	<h2 align="middle">Website URL: <a href="https://cal-cs184-student.github.io/project-webpages-sp23-adityasingh7311/proj3-1/index.html">https://cal-cs184-student.github.io/project-webpages-sp23-adityasingh7311/proj3-1/index.html</a></h2>
 
 	<br><br>
 		<div>
 
 			<h2 align="middle">Overview</h2>
 			<p>
-				YOUR RESPONSE GOES HERE
+				This project required implementing a pathtracer. We start by writing code to generate camera rays and sample pixels, as well as some intersection
+				tests for primitives (spheres and triangles). Naive rendering is impractically slow so next we implement a BVH, for which we implemented intersection
+				testing in the BBOX class as well as all the functionality in the BVH to construct the BVH tree and test for intersections in an accelerated way by pruning
+				the binary tree based on whether a certain ray could possibly intersect an entire node or not. Now to improve our lighting and shading we write code to estimate lighting
+				based on ray tracing. For direct lighting we implement two different sampling methods: a noisier uniform hemisphere sampling and a better lighting importance sampler.
+				Next for global illumination, we recursively bounce rays and estimate the total illumination reaching a point from all sources, including the light sources and also
+				surface reflections. Finally, we improve our pixel sampling by using adaptive sampling so that we don't have to sample a high number of rays for every pixel.
+
 			</p>
 			<br />
 
@@ -75,7 +82,6 @@
 				When the ray is being traced, the pathtracer checks for intersections with the scene geometry to find the appropriate illuminance. In this part, I implemented
 				functions to check for intersections with triangles and spheres, the former of which is described below.
 
-				TODO: est_radiance_global_illuminance checks for intersection?
 			</p>
 			<br />
 
