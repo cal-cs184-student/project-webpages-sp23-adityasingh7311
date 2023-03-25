@@ -57,8 +57,8 @@
     </div>
     <br />
     <p>
-        The higher alpha levels seem to have less noise spots scattered on the image and also less black spots on the body of the figure. Alpha is the measure of the roughness of the surface
-        so higher alpha results in a more diffuse appearance due to more scattering of light. The lower alpha images have a shinier figure whereas the higher are more matte.
+        The higher alpha levels seem to have less noise spots scattered on the image and also less black spots on the body of the figure. Alpha is the measure of the roughness of the macro surface
+        so higher alpha results in a more diffuse appearance due to more scattering of light. The lower alpha images have a glossier figure whereas the higher are more matte.
     </p>
     <br>
     <p>
@@ -81,7 +81,8 @@
         </table>
     </div>
     <p>
-        The hemisphere sampling has more noise (static dots) on the body of the image since importance sampling uses a smarter distribution to sample the image. Hemisphere sampling is slower to converge.
+        The hemisphere sampling has more noise (static dots) on the body of the image since importance sampling uses a smarter distribution to sample the image. 
+        That is, the implemented importance sampling uses pdfs that resemble the Beckmann NDF being used for the microfacets. Hemisphere sampling is slower to converge.
     </p>
     <br>
     <p>
@@ -114,7 +115,9 @@
     </p>
     <p>
        In the idealistic pinhole model, all light passes through a point and is projected on a film. This makes it so that the entire image is in focus. In the thin-lens
-        model, light is refracted through a lens. Only points at the focal distance are in focus which means parts of the simulated image can be in focus or blurred.
+        model, light is refracted through a lens. Only points at the focal distance (on the plane of focus) are in focus which means parts of the simulated image can be in focus or blurred.
+        With the lens model we can also adjust the aperture size which can control the depth of field, the range of distances at which objects are rendered sharp. A larger aperture will
+        have a shallower depth of field which will make more of the image blurry.
     </p>
     <br>
     <p>
